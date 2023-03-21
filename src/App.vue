@@ -1,8 +1,8 @@
 <template>
-  <div class="h-5 bg-r-emphasis"></div>
+  <div class="h-5 "></div>
   <!-- container -->
-  <div class="mt-5 mx-20">
-    <div class="text-center my-8">
+  <div class="mx-20">
+    <div class="text-center my-5">
       <h1 class="text-2xl font-bold">{{ name }}</h1>
 
       <!-- Personal Infomation -->
@@ -18,38 +18,32 @@
 
     <!-- Work Experience -->
     <SectionHead icon="bi bi-person-workspace">工作经历</SectionHead>
-    <div v-for="exp in experience" class="text-content mt-2">
-      <BothsideText>
+    <div v-for="exp, index in experience" class="text-content mt-2">
+      <BothsideText :class="index !== 0 ? 'mt-2' : ''">
         <template #left>
-          <div class="font-medium text-r-emphasis">
+          <div class="font-medium text-r-title">
             {{ exp.corpName }}
           </div>
-        </template>
-        <template #right>
-          <div class="font-medium text-r-emphasis">
-            {{ exp.time }}
-          </div>
-        </template>
-      </BothsideText>
-      <BothsideText>
-        <template #left>
-          <div class="text-r-emphasis italic">
+          <div class="w-2"></div>
+          <div>-</div>
+          <div class="w-2"></div>
+          <div class=" text-r-title">
             {{ exp.title }}
           </div>
         </template>
         <template #right>
-          <div class="text-r-emphasis">
-            {{ exp.location }}
+          <div class="font-medium text-r-title">
+            {{ exp.time }}
           </div>
         </template>
       </BothsideText>
-      <Content class="text-content mt-[3px]" :content="exp.content" />
+      <Content class="text-content" :content="exp.content" />
     </div>
 
     <!-- Skills -->
     <SectionHead icon="bi bi-tools">专业技能</SectionHead>
     <div class="text-content">
-      <Content class="text-content" :content="skills.content" />
+      <Content class="text-content gap-y-0.5" :content="skills.content" />
     </div>
 
     <!-- Education -->
@@ -69,7 +63,7 @@
       </BothsideText>
       <BothsideText>
         <template #left>
-          <div class="text-r-emphasis italic">
+          <div class="text-r-title italic">
             {{ edu.title }}
           </div>
         </template>
@@ -93,7 +87,7 @@ import Info from './components/Info.vue'
 import SectionHead from './components/SectionHead.vue'
 import BothsideText from './components/BothsideText.vue'
 import Content from './components/Content.vue'
-import { name, info, experience, education, others, skills } from './content'
+import { name, info, experience, education, others, skills } from './content_fake'
 
 
 </script>

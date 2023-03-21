@@ -1,10 +1,9 @@
 <template>
-  <div class="text-lg flex font-semibold text-r-emphasis items-center mt-4 mb-2">
-    <div class="flex justify-center items-center mr-1.5 w-5 h-5 rounded-full bg-r-emphasis text-white">
-      <i class="text-xs" :class="props.icon"></i>
-    </div>
+  <div class="text-lg flex font-bold text-white bg-r-emphasis pl-2 rounded-md items-center mt-5 mb-2">
+    <!-- <div class="flex justify-center items-center mr-1.5 w-5 h-5 rounded-full bg-r-emphasis text-white"> -->
+      <i class="mr-2" :class="props.icon"></i>
+    <!-- </div> -->
     <div><slot></slot></div>
-    <div class="grow pl-3"><hr /></div>
   </div>
 </template>
 <script setup>

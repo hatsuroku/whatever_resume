@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'r-emphasis': '#1467A3',
+        'r-title': '#105687',
       }
     },
   },
