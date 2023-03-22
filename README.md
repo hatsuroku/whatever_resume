@@ -1,4 +1,11 @@
+# 一个很普通的程序员简历模板
+
+![example](./example.png)
+
+
+
 ## 运行
+
 ```bash
 yarn
 yarn dev
